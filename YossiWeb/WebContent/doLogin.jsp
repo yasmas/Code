@@ -1,9 +1,12 @@
 <%@ page contentType="text/html; charset=iso-8859-1" language="java" %>
+<%@ page import="yossi.web.ChatUsers" %>
 <%
 	String username = request.getParameter("username");
 	String password = request.getParameter("password");
 	if(username!=null && password.equals(username)) {
 		session.setAttribute("username",username);
+		// Add the user to the ChatUsers
+		ChatUsers.addUser(username);
 		response.sendRedirect("chat.jsp");
 		return;
 	}
