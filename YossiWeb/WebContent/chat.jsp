@@ -15,6 +15,9 @@
 </head>
 <body>
 Hello <%=session.getAttribute("username")%>!
+
+<%
+%>
 <br>
 
 </body>
