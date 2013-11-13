@@ -4,8 +4,6 @@ from django.core.urlresolvers import reverse
 from django.utils import timezone
 from polls.models import Choice, Poll
 
-a=1
-
 def index(request):
     """
     Return the last five published polls (not including those set to be
